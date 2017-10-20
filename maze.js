@@ -1,7 +1,19 @@
+
 window.onload = function(){
-document.getElementById("boundary1").addEventListener("mouseover",youLose);
+var classname = document.querySelectorAll(".boundary");
+
+for (var i = 0; i < classname.length; i++) {
+    classname[i].addEventListener('mouseover', youLose);
+}
+
+
 };
 
+
+
 function youLose(){
-		document.getElementById("boundary1").classList.add("youlose");
+	var classname = document.querySelectorAll(".boundary");
+	for (var i = 0; i < classname.length; i++) {
+    classname[i].classList.add("youlose");
+	}
 }
